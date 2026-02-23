@@ -1,5 +1,6 @@
 let interviewList=[];
 let rejectedList=[];
+let total=8;
 
 let currentStatus = 'all-btn'
 const allSection=getAnyElementById('job-des-sec')
@@ -19,7 +20,8 @@ const numberOfRejected=getAnyElementById('number-count-rejected')
 
 
 function calculateCount(){
-    numberOfTotal.innerText=jobDesSec.children.length;
+    // numberOfTotal.innerText=jobDesSec.children.length;
+    numberOfTotal.innerText=total;
     numberOfInterview.innerText=interviewList.length
     numberOfRejected.innerText=rejectedList.length
 }
@@ -135,7 +137,32 @@ mainContainer.addEventListener('click', function(event){
         calculateCount()
 
     }
+    if (event.target.closest('.delete-btn') || event.target.closest('.fa-regular')) {
+    const card = event.target.closest('.card');
 
+    const company = card.querySelector('.name-of-company').innerText;
+
+    
+    interviewList = interviewList.filter(item => item.company !== company);
+
+    
+    rejectedList = rejectedList.filter(item => item.company !== company);
+
+    
+    card.remove();
+    total--;
+
+    
+    if (currentStatus === 'interview-btn') {
+        defaultShowInterview();
+    }
+    if (currentStatus === 'rejected-btn') {
+        defaultShowRejected();
+    }
+
+    calculateCount();
+    return;
+}
 
 })
 
