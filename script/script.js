@@ -14,6 +14,7 @@ const mainContainer = document.querySelector('main');
 const numberOfTotal =getAnyElementById('number-count-total')
 const numberOfInterview=getAnyElementById('number-count-interview')
 const numberOfRejected=getAnyElementById('number-count-rejected')
+const theJobValue=getAnyElementById('job-count')
 
 
 
@@ -48,7 +49,9 @@ function btnHandle(id){
         jobDesSec.classList.add('hidden')
         rejectedTap.classList.add('hidden')
         interviewTap.classList.remove('hidden')
+        
         defaultShowInterview()
+        
     }else if(id==='all-btn'){
         rejectedTap.classList.add('hidden')
         interviewTap.classList.add('hidden')
@@ -60,9 +63,11 @@ function btnHandle(id){
          interviewTap.classList.add('hidden')
          rejectedTap.classList.remove('hidden')
          defaultShowRejected()
+         
 
 
     }
+    JobsText()
 
 }
 
@@ -78,7 +83,7 @@ mainContainer.addEventListener('click', function(event){
         const jobDescription =nodeParent.querySelector('.name-of-job-des').innerText
         const status=nodeParent.querySelector('.name-of-status').innerText
 
-        nodeParent.querySelector('.name-of-status').innerText='InterView'
+        nodeParent.querySelector('.name-of-status').innerText='Interview'
         
         const jobInfo = {
             company,
@@ -102,6 +107,7 @@ mainContainer.addEventListener('click', function(event){
             defaultShowRejected()
         }
         calculateCount()
+        JobsText()
 
     }else if(event.target.classList.contains('my-rejected-btn')){
         const nodeParent = event.target.parentNode.parentNode
@@ -135,6 +141,7 @@ mainContainer.addEventListener('click', function(event){
         }
 
         calculateCount()
+        JobsText()
 
     }
     if (event.target.closest('.delete-btn') || event.target.closest('.fa-regular')) {
@@ -151,6 +158,7 @@ mainContainer.addEventListener('click', function(event){
     
     card.remove();
     total--;
+    JobsText()
 
     
     if (currentStatus === 'interview-btn') {
