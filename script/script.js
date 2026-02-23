@@ -25,3 +25,20 @@ function calculateCount(){
     numberOfRejected.innerText=rejectedList.length;
 }
 calculateCount();
+
+function btnHandle(id){
+    allBtn.classList.add('bg-base-200', 'text-[#64748B]')
+    interviewBtn.classList.add('bg-base-200', 'text-[#64748B]')
+    rejectionBtn.classList.add('bg-base-200', 'text-[#64748B]')
+
+    allBtn.classList.remove('bg-primary', 'text-white')
+    interviewBtn.classList.remove('bg-primary', 'text-white')
+    rejectionBtn.classList.remove('bg-primary', 'text-white')
+
+    const selected =document.getElementById(id);
+    
+    
+    selected.classList.remove('bg-base-200', 'text-[#64748B]')
+    selected.classList.add('bg-primary', 'text-white')
+
+}

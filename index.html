@@ -60,25 +60,22 @@
         <!-- 3 tab sections -->
         <div id="my-btns" class="space-x-2 mb-4">
 
-            <button id="all-btn" class="btn w-[100px] text-[12px] text-white font-semibold bg-primary">All</button>
+            <button onclick="btnHandle('all-btn')" id="all-btn" class="btn w-[100px] text-[12px] text-white font-semibold bg-primary">All</button>
 
 
-            <button id="interview-btn" class="btn w-[100px] text-[12px] text-[#64748B] font-semibold">Interview</button>
+            <button onclick="btnHandle('interview-btn')" id="interview-btn" class="btn w-[100px] text-[12px] text-[#64748B] font-semibold">Interview</button>
 
 
-            <button id="rejected-btn" class="btn w-[100px] text-[12px] text-[#64748B] font-semibold">Rejected</button>
+            <button onclick="btnHandle('rejected-btn')" id="rejected-btn" class="btn w-[100px] text-[12px] text-[#64748B] font-semibold">Rejected</button>
 
         </div>
+        
+        <section id="the-hidden-gem" class="hidden"></section></section>
 
-        <!-- A pre hidden section for interview  -->
-        <section id="the-hidden-gem" class="hidden">
 
 
-        </section>
-        <!-- A pre hidden section for rejection -->
-        <section id="the-hidden-gem-rej" class="hidden">
 
-        </section>
+
 
         <!-- Job description section -->
         <section class="space-y-4" id="job-des-sec">
@@ -123,7 +120,8 @@
                 <div class="flex justify-between">
                     <!-- Div left side -->
                     <div class="space-x-2">
-                        <h1 class="text-[18px] text-[#002C5C] font-semibold mb-1 name-of-company ">WebFlow Agency</h1>
+                        <h1 class="text-[18px] text-[#002C5C] font-semibold mb-1 name-of-company ">WebFlow Agency
+                        </h1>
                         <p class="text-[#64748B] mb-5 name-of-role ">Web Designer & Developer</p>
                         <p class="text-[14px] text-[#64748B] mb-5 name-of-location ">Los Angeles, CA
                             •
@@ -134,7 +132,8 @@
                             class="bg-[#EEF4FF] text-[14px] text-[#002C5C] font-medium p-2 rounded-sm inline-block mb-2      name-of-status ">
                             NOT
                             APPLIED</p>
-                        <p class="text-[#323B49] text-[14px] mb-5  name-of-job-des ">Create stunning web experiences for
+                        <p class="text-[#323B49] text-[14px] mb-5  name-of-job-des ">Create stunning web experiences
+                            for
                             high-profile
                             clients.
                             Must have portfolio and experience with modern web design trends.</p>
@@ -201,7 +200,8 @@
                 <div class="flex justify-between">
                     <!-- Div left side -->
                     <div class="space-x-2">
-                        <h1 class="text-[18px] text-[#002C5C] font-semibold mb-1 name-of-company ">CloudFirst Inc</h1>
+                        <h1 class="text-[18px] text-[#002C5C] font-semibold mb-1 name-of-company ">CloudFirst Inc
+                        </h1>
                         <p class="text-[#64748B] mb-5 name-of-role ">Backend Developer</p>
                         <p class="text-[14px] text-[#64748B] mb-5 name-of-location ">Seattle, WA
                             •
@@ -212,7 +212,8 @@
                             class="bg-[#EEF4FF] text-[14px] text-[#002C5C] font-medium p-2 rounded-sm inline-block mb-2     name-of-status ">
                             NOT
                             APPLIED</p>
-                        <p class="text-[#323B49] text-[14px] mb-5 name-of-job-des ">Design and maintain scalable backend
+                        <p class="text-[#323B49] text-[14px] mb-5 name-of-job-des ">Design and maintain scalable
+                            backend
                             systems using
                             Python
                             and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
@@ -239,7 +240,8 @@
                 <div class="flex justify-between">
                     <!-- Div left side -->
                     <div class="space-x-2">
-                        <h1 class="text-[18px] text-[#002C5C] font-semibold mb-1 name-of-company ">Innovation Labs</h1>
+                        <h1 class="text-[18px] text-[#002C5C] font-semibold mb-1 name-of-company ">Innovation Labs
+                        </h1>
                         <p class="text-[#64748B] mb-5 name-of-role ">UI/UX Engineer</p>
                         <p class="text-[14px] text-[#64748B] mb-5 name-of-location ">Austin, TX
                             •
@@ -250,7 +252,8 @@
                             class="bg-[#EEF4FF] text-[14px] text-[#002C5C] font-medium p-2 rounded-sm inline-block mb-2     name-of-status ">
                             NOT
                             APPLIED</p>
-                        <p class="text-[#323B49] text-[14px] mb-5 name-of-job-des ">Create beautiful and functional user
+                        <p class="text-[#323B49] text-[14px] mb-5 name-of-job-des ">Create beautiful and functional
+                            user
                             interfaces for
                             our
                             suite of products. Strong design skills and frontend development expertise required.</p>
@@ -277,7 +280,8 @@
                 <div class="flex justify-between">
                     <!-- Div left side -->
                     <div class="space-x-2">
-                        <h1 class="text-[18px] text-[#002C5C] font-semibold mb-1 name-of-company ">MegaCorp Solutions
+                        <h1 class="text-[18px] text-[#002C5C] font-semibold mb-1 name-of-company ">MegaCorp
+                            Solutions
                         </h1>
                         <p class="text-[#64748B] mb-5 name-of-role ">JavaScript Developer</p>
                         <p class="text-[14px] text-[#64748B] mb-5 name-of-location ">New York, NY
@@ -289,7 +293,8 @@
                             class="bg-[#EEF4FF] text-[14px] text-[#002C5C] font-medium p-2 rounded-sm inline-block mb-2     name-of-status ">
                             NOT
                             APPLIED</p>
-                        <p class="text-[#323B49] text-[14px] mb-5 name-of-job-des ">Build enterprise applications with
+                        <p class="text-[#323B49] text-[14px] mb-5 name-of-job-des ">Build enterprise applications
+                            with
                             JavaScript and
                             modern
                             frameworks. We offer competitive compensation, health insurance, and professional
@@ -329,7 +334,8 @@
                             class="bg-[#EEF4FF] text-[14px] text-[#002C5C] font-medium p-2 rounded-sm inline-block mb-2     name-of-status ">
                             NOT
                             APPLIED</p>
-                        <p class="text-[#323B49] text-[14px] mb-5 name-of-job-des ">Join our fast-growing startup and
+                        <p class="text-[#323B49] text-[14px] mb-5 name-of-job-des ">Join our fast-growing startup
+                            and
                             work on our core
                             platform. Experience with Node.js and React required. Great benefits and equity package
                             included.</p>
@@ -356,7 +362,8 @@
                 <div class="flex justify-between">
                     <!-- Div left side -->
                     <div class="space-x-2">
-                        <h1 class="text-[18px] text-[#002C5C] font-semibold mb-1 name-of-company ">TechCorp Industries
+                        <h1 class="text-[18px] text-[#002C5C] font-semibold mb-1 name-of-company ">TechCorp
+                            Industries
                         </h1>
                         <p class="text-[#64748B] mb-5 name-of-role ">Senior Frontend Developer</p>
                         <p class="text-[14px] text-[#64748B] mb-5 name-of-location ">San Francisco, CA
@@ -368,10 +375,12 @@
                             class="bg-[#EEF4FF] text-[14px] text-[#002C5C] font-medium p-2 rounded-sm inline-block mb-2     name-of-status ">
                             NOT
                             APPLIED</p>
-                        <p class="text-[#323B49] text-[14px] mb-5 name-of-job-des ">We are looking for an experienced
+                        <p class="text-[#323B49] text-[14px] mb-5 name-of-job-des ">We are looking for an
+                            experienced
                             Frontend Developer
                             to
-                            build scalable web applications using React and TypeScript. You will work with a talented
+                            build scalable web applications using React and TypeScript. You will work with a
+                            talented
                             team
                             on cutting-edge projects.</p>
                         <button
@@ -392,15 +401,15 @@
 
 
             </div>
-        </section>
+
 
     </main>
 
 
 
 
-    <script src="./scripts/machine.js"></script>
-  <script src="./scripts/script.js"></script>
+    <script src="./script/machine.js"></script>
+    <script src="./script/script.js"></script>
 </body>
 
 </html>
