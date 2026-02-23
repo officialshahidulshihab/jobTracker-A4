@@ -1,3 +1,5 @@
+const interviewList=[];
+const rejectedList=[];
 const allSection=getAnyElementById('job-des-sec')
 const allBtn =getAnyElementById('all-btn')
 const interviewBtn =getAnyElementById('interview-btn')
@@ -14,3 +16,12 @@ const nameOfLocation=getAnyElementByClassName('name-of-location')
 const nameOfStatus=getAnyElementByClassName('name-of-status')
 const nameOfJobSecDec=getAnyElementByClassName('name-of-job-des')
 const nameOfDeleteBtn=getAnyElementByClassName('delete-btn')
+
+
+
+function calculateCount(){
+    numberOfTotal.innerText =jobDesSec.children.length;
+    numberOfInterview.innerText=interviewList.length;
+    numberOfRejected.innerText=rejectedList.length;
+}
+calculateCount();
