@@ -18,7 +18,7 @@
 <body>
     <header class="w-[80%] mx-auto  ">
         <h1 class="text-[#002C5C] text-3xl font-bold mb-5  mt-5">Job Application Tracker</h1>
-        <div class="grid grid-cols-3 gap-4 mb-7">
+        <div class="grid grid-cols-1 gap-2 space-y-2 md:grid-cols-3 md:gap-4 mb-7">
             <div class="card  bg-base-100  shadow-sm">
                 <div class="card-body">
                     <h2 class="card-title text-[14px] text-[#323B49] font-medium">Total</h2>
@@ -47,7 +47,7 @@
 
     <main class="w-[80%] mx-auto space-y-4">
         <!-- Available section -->
-        <div class="flex justify-between mb-6 mt-6">
+        <div class="md:flex justify-between mb-6 mt-6">
             <div>
                 <h1 class="text-[20px] text-[#002C5C] font-semibold">Available Jobs</h1>
             </div>
@@ -60,13 +60,13 @@
         <!-- 3 tab sections -->
         <div id="my-btns" class="space-x-2 mb-4">
 
-            <button onclick="btnHandle('all-btn')" id="all-btn" class="btn w-[100px] text-[12px] text-white font-semibold bg-primary">All</button>
+            <button onclick="btnHandle('all-btn')" id="all-btn" class="btn md:w-[100px] text-[12px] text-white font-semibold bg-primary">All</button>
 
 
-            <button onclick="btnHandle('interview-btn')" id="interview-btn" class="btn w-[100px] text-[12px] text-[#64748B] font-semibold">Interview</button>
+            <button onclick="btnHandle('interview-btn')" id="interview-btn" class="btn md:w-[100px] text-[12px] text-[#64748B] font-semibold">Interview</button>
 
 
-            <button onclick="btnHandle('rejected-btn')" id="rejected-btn" class="btn w-[100px] text-[12px] text-[#64748B] font-semibold">Rejected</button>
+            <button onclick="btnHandle('rejected-btn')" id="rejected-btn" class="btn md:w-[100px] text-[12px] text-[#64748B] font-semibold">Rejected</button>
 
         </div>
         

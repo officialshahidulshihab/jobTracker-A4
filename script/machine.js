@@ -25,3 +25,5 @@ function JobsText() {
         theJobValue.innerText = `${rejectedSec} out of ${total} jobs`;
     }
 }
+
+

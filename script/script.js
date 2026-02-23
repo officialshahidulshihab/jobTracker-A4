@@ -94,17 +94,18 @@ mainContainer.addEventListener('click', function(event){
         }
         
         const jobExist = interviewList.find(item => item.company ===jobInfo.company)
-
+        
         if(!jobExist){
             interviewList.push(jobInfo)
         }
         rejectedList = rejectedList.filter(item => item.company !=jobInfo.company);
-
         
-
-
+        
+        
+        
         if(currentStatus==='rejected-btn'){
             defaultShowRejected()
+            
         }
         calculateCount()
         JobsText()
@@ -119,7 +120,7 @@ mainContainer.addEventListener('click', function(event){
         const jobDescription =nodeParent.querySelector('.name-of-job-des').innerText
 
         nodeParent.querySelector('.name-of-status').innerText='Rejected'
-
+        
         const jobInfo = {
             company,
             role,
@@ -127,17 +128,18 @@ mainContainer.addEventListener('click', function(event){
             status: 'Rejected',
             jobDescription
         }
-
+        
         const jobExist = rejectedList.find(item => item.company == jobInfo.company)
-
+        
         if(!jobExist){
             rejectedList.push(jobInfo)
         }
         interviewList = interviewList.filter(item => item.company !=jobInfo.company);
         
-
+        
         if(currentStatus==='interview-btn'){
             defaultShowInterview()
+            
         }
 
         calculateCount()
