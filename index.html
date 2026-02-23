@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Tracker</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+
+<body>
+    <header class="w-[80%] mx-auto  ">
+        <h1 class="text-[#002C5C] text-3xl font-bold mb-5  mt-5">Job Application Tracker</h1>
+        <div class="grid grid-cols-3 gap-4 mb-7">
+            <div class="card  bg-base-100  shadow-sm">
+                <div class="card-body">
+                    <h2 class="card-title text-[14px] text-[#323B49] font-medium">Total</h2>
+                    <p id="number-count-total" class="text-[24px] text-[#002C5C] font-bold">8</p>
+
+                </div>
+            </div>
+            <div class="card  bg-base-100  shadow-sm">
+                <div class="card-body">
+                    <h2 class="card-title text-[14px] text-[#323B49] font-medium">Interview</h2>
+                    <p id="number-count-interview" class="text-[24px] text-[#10B981] font-bold">0</p>
+
+                </div>
+            </div>
+            <div class="card  bg-base-100  shadow-sm">
+                <div class="card-body">
+                    <h2 class="card-title text-[14px] text-[#323B49] font-medium">Rejected</h2>
+                    <p id="number-count-rejected" class="text-[24px] text-[#EF4444] font-bold">0</p>
+
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <hr class="text-[#F8FAFC] ">
+
+    <main class="w-[80%] mx-auto space-y-4">
+        <!-- Available section -->
+        <div class="flex justify-between mb-6 mt-6">
+            <div>
+                <h1 class="text-[20px] text-[#002C5C] font-semibold">Available Jobs</h1>
+            </div>
+            <div>
+                <p class="text-[16px] font-medium text-[#64748B]">8 jobs</p>
+            </div>
+        </div>
+
+
+        <!-- 3 tab sections -->
+        <div id="my-btns" class="space-x-2 mb-4">
+
+            <button id="all-btn" class="btn w-[100px] text-[12px] text-white font-semibold bg-primary">All</button>
+
+
+            <button id="interview-btn" class="btn w-[100px] text-[12px] text-[#64748B] font-semibold">Interview</button>
+
+
+            <button id="rejected-btn" class="btn w-[100px] text-[12px] text-[#64748B] font-semibold">Rejected</button>
+
+        </div>
+
+        <!-- A pre hidden section for interview  -->
+        <section id="the-hidden-gem" class="hidden">
+
+
+        </section>
+        <!-- A pre hidden section for rejection -->
+        <section id="the-hidden-gem-rej" class="hidden">
+
+        </section>
+
+        <!-- Job description section -->
+        <section class="space-y-4" id="job-des-sec">
+            <div class="card bg-base-100  shadow-sm p-5 ">
+                <div class="flex justify-between">
+                    <!-- Div left side -->
+                    <div class="space-x-2">
+                        <h1 class="text-[18px] text-[#002C5C] font-semibold mb-1 name-of-company ">Mobile First Corp
+                        </h1>
+                        <p class="text-[#64748B] mb-5 name-of-role ">React Native Developer</p>
+                        <p class="text-[14px] text-[#64748B] mb-5 name-of-location ">Remote • Full-time • $130,000 -
+                            $175,000</p>
+                        <p
+                            class="bg-[#EEF4FF] text-[14px] text-[#002C5C] font-medium p-2 rounded-sm inline-block mb-2     name-of-status ">
+                            NOT
+                            APPLIED</p>
+                        <p class="text-[#323B49] text-[14px] mb-5 name-of-job-des ">Build cross-platform mobile
+                            applications using React
+                            Native.
+                            Work on products used by millions of
+                            users worldwide.</p>
+                        <button
+                            class="btn my-interview-btn text-[#10B981] text-[14px] font-semibold border-[#10B981]">Interview</button>
+                        <button
+                            class="btn my-rejected-btn text-[#EF4444] text-[14px] font-semibold border-[#EF4444]">Rejected</button>
+                    </div>
+
+
+                    <!-- Div Right side -->
+
+
+                    <div>
+                        <button class="btn rounded-[50%] delete-btn "><i class="fa-regular fa-trash-can"></i></button>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="card bg-base-100  shadow-sm p-5 ">
+                <div class="flex justify-between">
+                    <!-- Div left side -->
+                    <div class="space-x-2">
+                        <h1 class="text-[18px] text-[#002C5C] font-semibold mb-1 name-of-company ">WebFlow Agency</h1>
+                        <p class="text-[#64748B] mb-5 name-of-role ">Web Designer & Developer</p>
+                        <p class="text-[14px] text-[#64748B] mb-5 name-of-location ">Los Angeles, CA
+                            •
+                            Part-time
+                            •
+                            $80,000 - $120,000</p>
+                        <p
+                            class="bg-[#EEF4FF] text-[14px] text-[#002C5C] font-medium p-2 rounded-sm inline-block mb-2      name-of-status ">
+                            NOT
+                            APPLIED</p>
+                        <p class="text-[#323B49] text-[14px] mb-5  name-of-job-des ">Create stunning web experiences for
+                            high-profile
+                            clients.
+                            Must have portfolio and experience with modern web design trends.</p>
+                        <button
+                            class="btn my-interview-btn text-[#10B981] text-[14px] font-semibold border-[#10B981]">Interview</button>
+                        <button
+                            class="btn my-rejected-btn  text-[#EF4444] text-[14px] font-semibold border-[#EF4444]">Rejected</button>
+                    </div>
+
+
+                    <!-- Div Right side -->
+
+
+                    <div>
+                        <button class="btn rounded-[50%] delete-btn "><i class="fa-regular fa-trash-can"></i></button>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="card bg-base-100  shadow-sm p-5 ">
+                <div class="flex justify-between">
+                    <!-- Div left side -->
+                    <div class="space-x-2">
+                        <h1 class="text-[18px] text-[#002C5C] font-semibold mb-1 name-of-company ">DataViz Solutions
+                        </h1>
+                        <p class="text-[#64748B] mb-5 name-of-role ">Data Visualization Specialist</p>
+                        <p class="text-[14px] text-[#64748B] mb-5 name-of-location ">Boston, MA
+                            •
+                            Full-time
+                            •
+                            $125,000 - $165,000</p>
+                        <p
+                            class="bg-[#EEF4FF] text-[14px] text-[#002C5C] font-medium p-2 rounded-sm inline-block mb-2     name-of-status ">
+                            NOT
+                            APPLIED</p>
+                        <p class="text-[#323B49] text-[14px] mb-5 name-of-job-des ">Transform complex data into
+                            compelling
+                            visualizations.
+                            Required skills: D3.js, React, and strong analytical thinking.
+                        </p>
+                        <button
+                            class="btn my-interview-btn text-[#10B981] text-[14px] font-semibold border-[#10B981]">Interview</button>
+                        <button
+                            class="btn my-rejected-btn text-[#EF4444] text-[14px] font-semibold border-[#EF4444]">Rejected</button>
+                    </div>
+
+
+                    <!-- Div Right side -->
+
+
+                    <div>
+                        <button class="btn rounded-[50%] delete-btn "><i class="fa-regular fa-trash-can"></i></button>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="card bg-base-100  shadow-sm p-5 ">
+                <div class="flex justify-between">
+                    <!-- Div left side -->
+                    <div class="space-x-2">
+                        <h1 class="text-[18px] text-[#002C5C] font-semibold mb-1 name-of-company ">CloudFirst Inc</h1>
+                        <p class="text-[#64748B] mb-5 name-of-role ">Backend Developer</p>
+                        <p class="text-[14px] text-[#64748B] mb-5 name-of-location ">Seattle, WA
+                            •
+                            Full-time
+                            •
+                            $140,000 - $190,000</p>
+                        <p
+                            class="bg-[#EEF4FF] text-[14px] text-[#002C5C] font-medium p-2 rounded-sm inline-block mb-2     name-of-status ">
+                            NOT
+                            APPLIED</p>
+                        <p class="text-[#323B49] text-[14px] mb-5 name-of-job-des ">Design and maintain scalable backend
+                            systems using
+                            Python
+                            and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
+                        <button
+                            class="btn my-interview-btn text-[#10B981] text-[14px] font-semibold border-[#10B981]">Interview</button>
+                        <button
+                            class="btn my-rejected-btn text-[#EF4444] text-[14px] font-semibold border-[#EF4444]">Rejected</button>
+                    </div>
+
+
+                    <!-- Div Right side -->
+
+
+                    <div>
+                        <button class="btn rounded-[50%] delete-btn "><i class="fa-regular fa-trash-can"></i></button>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="card bg-base-100  shadow-sm p-5 ">
+                <div class="flex justify-between">
+                    <!-- Div left side -->
+                    <div class="space-x-2">
+                        <h1 class="text-[18px] text-[#002C5C] font-semibold mb-1 name-of-company ">Innovation Labs</h1>
+                        <p class="text-[#64748B] mb-5 name-of-role ">UI/UX Engineer</p>
+                        <p class="text-[14px] text-[#64748B] mb-5 name-of-location ">Austin, TX
+                            •
+                            Full-time
+                            •
+                            $110,000 - $150,000</p>
+                        <p
+                            class="bg-[#EEF4FF] text-[14px] text-[#002C5C] font-medium p-2 rounded-sm inline-block mb-2     name-of-status ">
+                            NOT
+                            APPLIED</p>
+                        <p class="text-[#323B49] text-[14px] mb-5 name-of-job-des ">Create beautiful and functional user
+                            interfaces for
+                            our
+                            suite of products. Strong design skills and frontend development expertise required.</p>
+                        <button
+                            class="btn my-interview-btn text-[#10B981] text-[14px] font-semibold border-[#10B981]">Interview</button>
+                        <button
+                            class="btn my-rejected-btn text-[#EF4444] text-[14px] font-semibold border-[#EF4444]">Rejected</button>
+                    </div>
+
+
+                    <!-- Div Right side -->
+
+
+                    <div>
+                        <button class="btn rounded-[50%] delete-btn "><i class="fa-regular fa-trash-can"></i></button>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="card bg-base-100  shadow-sm p-5 ">
+                <div class="flex justify-between">
+                    <!-- Div left side -->
+                    <div class="space-x-2">
+                        <h1 class="text-[18px] text-[#002C5C] font-semibold mb-1 name-of-company ">MegaCorp Solutions
+                        </h1>
+                        <p class="text-[#64748B] mb-5 name-of-role ">JavaScript Developer</p>
+                        <p class="text-[14px] text-[#64748B] mb-5 name-of-location ">New York, NY
+                            •
+                            Full-time
+                            •
+                            $130,000 - $170,00</p>
+                        <p
+                            class="bg-[#EEF4FF] text-[14px] text-[#002C5C] font-medium p-2 rounded-sm inline-block mb-2     name-of-status ">
+                            NOT
+                            APPLIED</p>
+                        <p class="text-[#323B49] text-[14px] mb-5 name-of-job-des ">Build enterprise applications with
+                            JavaScript and
+                            modern
+                            frameworks. We offer competitive compensation, health insurance, and professional
+                            development
+                            opportunities.</p>
+                        <button
+                            class="btn my-interview-btn text-[#10B981] text-[14px] font-semibold border-[#10B981]">Interview</button>
+                        <button
+                            class="btn my-rejected-btn text-[#EF4444] text-[14px] font-semibold border-[#EF4444]">Rejected</button>
+                    </div>
+
+
+                    <!-- Div Right side -->
+
+
+                    <div>
+                        <button class="btn rounded-[50%] delete-btn "><i class="fa-regular fa-trash-can"></i></button>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="card bg-base-100  shadow-sm p-5 ">
+                <div class="flex justify-between">
+                    <!-- Div left side -->
+                    <div class="space-x-2">
+                        <h1 class="text-[18px] text-[#002C5C] font-semibold mb-1 name-of-company ">StartupXYZ</h1>
+                        <p class="text-[#64748B] mb-5 name-of-role ">Full Stack Engineer</p>
+                        <p class="text-[14px] text-[#64748B] mb-5 name-of-location ">Remote
+                            •
+                            Full-time
+                            •
+                            $120,000 - $160,000</p>
+                        <p
+                            class="bg-[#EEF4FF] text-[14px] text-[#002C5C] font-medium p-2 rounded-sm inline-block mb-2     name-of-status ">
+                            NOT
+                            APPLIED</p>
+                        <p class="text-[#323B49] text-[14px] mb-5 name-of-job-des ">Join our fast-growing startup and
+                            work on our core
+                            platform. Experience with Node.js and React required. Great benefits and equity package
+                            included.</p>
+                        <button
+                            class="btn my-interview-btn text-[#10B981] text-[14px] font-semibold border-[#10B981]">Interview</button>
+                        <button
+                            class="btn my-rejected-btn text-[#EF4444] text-[14px] font-semibold border-[#EF4444]">Rejected</button>
+                    </div>
+
+
+                    <!-- Div Right side -->
+
+
+                    <div>
+                        <button class="btn rounded-[50%] delete-btn "><i class="fa-regular fa-trash-can"></i></button>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="card bg-base-100  shadow-sm p-5 ">
+                <div class="flex justify-between">
+                    <!-- Div left side -->
+                    <div class="space-x-2">
+                        <h1 class="text-[18px] text-[#002C5C] font-semibold mb-1 name-of-company ">TechCorp Industries
+                        </h1>
+                        <p class="text-[#64748B] mb-5 name-of-role ">Senior Frontend Developer</p>
+                        <p class="text-[14px] text-[#64748B] mb-5 name-of-location ">San Francisco, CA
+                            •
+                            Full-time
+                            •
+                            $130,000 - $175,000</p>
+                        <p
+                            class="bg-[#EEF4FF] text-[14px] text-[#002C5C] font-medium p-2 rounded-sm inline-block mb-2     name-of-status ">
+                            NOT
+                            APPLIED</p>
+                        <p class="text-[#323B49] text-[14px] mb-5 name-of-job-des ">We are looking for an experienced
+                            Frontend Developer
+                            to
+                            build scalable web applications using React and TypeScript. You will work with a talented
+                            team
+                            on cutting-edge projects.</p>
+                        <button
+                            class="btn my-interview-btn text-[#10B981] text-[14px] font-semibold border-[#10B981]">Interview</button>
+                        <button
+                            class="btn my-rejected-btn text-[#EF4444] text-[14px] font-semibold border-[#EF4444]">Rejected</button>
+                    </div>
+
+
+                    <!-- Div Right side -->
+
+
+                    <div>
+                        <button class="btn rounded-[50%] delete-btn"><i class="fa-regular fa-trash-can"></i></button>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+    </main>
+
+
+
+
+    <script src="./scripts/machine.js"></script>
+  <script src="./scripts/script.js"></script>
+</body>
+
+</html>
